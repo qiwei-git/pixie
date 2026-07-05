@@ -12,6 +12,14 @@ const app = new Vue({
             },            
         }
     },
+    computed: {
+        fromLabel() {
+            if (this.hitokoto.from && this.hitokoto.from_who) {
+                return `${this.hitokoto.from} / ${this.hitokoto.from_who}`;
+            }
+            return this.hitokoto.from ? this.hitokoto.from : this.hitokoto.from_who
+        },
+    },
     mounted() {
         let hitokoto = localStorage.getItem(this.hitokoto.key);
         if (hitokoto) {

@@ -47,13 +47,13 @@
                 {{ this.hitokoto.content }}
             </p>
             <!-- 出处 -->
-            <p v-show="this.hitokoto.from_who && this.hitokoto.from_who !== null" class="text-right text-slate-500 text-lg font-medium animate-once-fade-up delay-400">
-                —— {{this.hitokoto.from_who}}
+            <p v-show="this.fromLabel" class="text-right text-slate-500 text-lg font-medium animate-once-fade-up delay-400">
+                —— {{this.fromLabel}}
             </p>
         </div>
 
         <!-- 底部小字装饰 -->
-        <p class="mt-10 text-slate-400 text-sm animate-once-fade-up delay-400 mb-60">
+        <p class="mt-10 text-slate-400 text-sm animate-once-fade-up delay-400 mb-10">
             清风自来 · 静待花开
         </p>
     </div>
